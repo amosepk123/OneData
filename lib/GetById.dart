@@ -23,6 +23,9 @@ class _getSingleState extends State<getSingle> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Get_By_Id"),
+      ),
       body: Column(
         children: [
           FutureBuilder(
