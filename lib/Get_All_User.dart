@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart'as http;
 import 'GetById.dart';
+
 import 'User_model.dart';
 
 class Getall extends StatefulWidget {
@@ -14,16 +15,14 @@ class Getall extends StatefulWidget {
 
 class _GetallState extends State<Getall> {
 
+
   void initState(){
     super.initState();
     loadUsers();
   }
-  bool _isLoading = false;
-  String _errorMessage = '';
+
   Future<List<Users>> loadUsers() async {
     setState(() {
-      _isLoading = true;
-      _errorMessage = '';
     });
       var res = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/users"));
       var data = jsonDecode(res.body);
@@ -80,6 +79,7 @@ class _GetallState extends State<Getall> {
 
                                   ],
                                 ),
+
                               ),
                             ),
                           );
