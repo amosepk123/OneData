@@ -68,7 +68,7 @@ class _getSingleState extends State<getSingle> {
                       ElevatedButton(
                           onPressed: () async {
                             await auth.signout();
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Login()));
                           },
                           child: Text("logout"))
                     ],
